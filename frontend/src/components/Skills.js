@@ -1,17 +1,17 @@
 import React from 'react'
 
 import Carousel from './Carousel';
-import CppIcon from "../icons/CppIcon";
-import CssIcon from "../icons/CssIcon";
-import HtmlIcon from "../icons/HtmlIcon";
-import JsIcon from '../icons/JsIcon';
 
+import jsSvg from "../pictures/javascript.svg"
+import cppSvg from "../pictures/c++.svg"
+import htmlSvg from "../pictures/html.svg"
+import cssSvg from "../pictures/css.svg"
 function Skills() {
 
   return (
     <div className='skills-container'>
       <h1>My skills</h1>
-       <Carousel item1={<CppIcon/>} item2={<CssIcon/>} item3={<HtmlIcon/>}/>
+       <Carousel items={[jsSvg,cppSvg,htmlSvg,cssSvg]}/>
     </div>
   )
 }

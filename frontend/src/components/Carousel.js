@@ -1,26 +1,52 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ArrowLeft from '../icons/ArrowLeft'
 import ArrowRight from '../icons/ArrowRight'
-function Carousel({item1,item2,item3,item4}) {
 
- const items = [item1,item2,item3];
+
+
+function Carousel({items}) {
+
+
  const [currItem,setCurrItem] = useState(0);
 
+  const intervalIdRef = useRef(null);
+  const timeoutIdRef = useRef(null);
 
-//  useEffect(()=>{
-//    const intervalId = setInterval(next,500);
-//    return ()=>{
-//     clearInterval(intervalId);
-//    }
-//  },[])
+ const resetInterval = ()=>{
+  clearInterval(intervalIdRef.current);
+  clearTimeout(timeoutIdRef.current);
+  timeoutIdRef.current =setTimeout(()=>{
+    intervalIdRef.current = setInterval(()=>{
+      setCurrItem((prevItem)=>(prevItem+1)%items.length);
+    },2000)
+  },3000)
+ };
 
- const next = ()=>{
-  let item = currItem;
-  item  = (item+1)%(items.length);
-  setCurrItem(item);
+
+ useEffect(()=>{
+    
+    intervalIdRef.current = setInterval(()=>{
+      setCurrItem((prevItem) => (prevItem+1)%items.length);
+   },2000)
+   return ()=>{
+    clearInterval(intervalIdRef.current);
+   }
+ },[])
+
+
+
+ const next =  ()=>{
+ 
+ 
+ 
+   setCurrItem((prevItem) => (prevItem+1)%items.length);
+   resetInterval();
+  
+  
  }
 
  const prev = ()=>{
+   
     let item = currItem;
     if(item==0){
         item = items.length-1;
@@ -30,20 +56,26 @@ function Carousel({item1,item2,item3,item4}) {
     }
    
     setCurrItem(item);
+    resetInterval();
  }
 
   return (
     <div className='carousel'>
         <div className='left-arrow'
-        onClick={()=>next()}
+        onClick={()=>prev()}
         >
         <ArrowLeft />
         </div>
-      <div className='carousel-item'>
-        {items[currItem]}
+        
+      <div className='carousel-item' src={items[currItem]}
+      
+      style={{backgroundImage:`url(${items[currItem]})`}}
+      
+      >
+       
       </div>
       <div className='right-arrow'
-      onClick={()=>prev()}
+      onClick={()=>next()}
       >
       <ArrowRight/>
       </div>
