@@ -1,24 +1,29 @@
 import React from 'react'
 
-function HamburgerMenu({display}) {
+function HamburgerMenu({menuHeight}) {
+  const buttonDisplay = menuHeight === "0px"?"none":"inline-block";
+ 
   return (
     <div className='hmbg-menu'
     
-    style={{display:`${display}`}}
+    style={{height:menuHeight}}
     
     >
        
-        <button>
+        <button style={{display:buttonDisplay}}>
          _home
-        </button>
-        <button>
+        </button >
+        <button style={{display:buttonDisplay}}>
             _about
             </button>
-            <button >
+            <button style={{display:buttonDisplay}} >
              _resume
             </button>
-            <button>
+            <button style={{display:buttonDisplay}}>
               _contact
+            </button>
+            <button style={{display:buttonDisplay}}>
+              _projects
             </button>
           
     

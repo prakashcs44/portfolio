@@ -6,7 +6,7 @@ import Menu from './Menu';
 
 function Navbar() {
   
-  const [showHmbgMenu,setShowHmbgMenu]  = useState("none");
+  const [menuHeight,setMenuHeight]  = useState("0px");
 
 
   return (
@@ -30,12 +30,15 @@ function Navbar() {
             <button id = "contact-btn">
               _contact
             </button>
+            <button id = "project-btn">
+               _projects
+            </button>
          
       </div>
      
-     <Menu toggle={setShowHmbgMenu} display={showHmbgMenu}/>
+     <Menu toggle={setMenuHeight} height={menuHeight}/>
     </div>
-    <HamburgerMenu display = {showHmbgMenu}/>
+    <HamburgerMenu menuHeight = {menuHeight}/>
     </>
   )
 }

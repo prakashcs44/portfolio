@@ -1,20 +1,20 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import {Routes,Route} from "react-router-dom"
 import "./App.css"
-import SkillsDynamicDisplay from './components/SkillsDynamicDisplay'
-import Main from './components/Main'
-import AboutMe from './components/AboutMe'
-import Skills from './components/Skills'
+
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Contact from './pages/Contact'
 function App() {
   return (
     <div>
       <Navbar/>
-      <SkillsDynamicDisplay/>
-      <Main/>
-      <AboutMe/>
-      <Skills/>
-      <Footer/>
+      <Routes>
+        <Route path='/' element = {<Home/>}/>
+        <Route path = '/contact' element = {<Contact/>}/>
+      </Routes>
+    <Footer/>
     </div>
   )
 }

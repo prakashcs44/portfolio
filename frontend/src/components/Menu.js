@@ -1,17 +1,17 @@
 import React from 'react'
 import CloseIcon from "../icons/CloseIcon"
 import OpenIcon from "../icons/OpenIcon"
-function Menu({toggle,display}) {
+function Menu({toggle,height}) {
 
 
 
 
 const showMenu = ()=>{
-  if(display === 'flex'){
-    toggle("none")
+  if(height === '0px'){
+    toggle("300px")
   }
   else{
-    toggle("flex");
+    toggle("0px");
   }
 }
 
@@ -21,7 +21,7 @@ const showMenu = ()=>{
     
     onClick={()=>showMenu()}
     >
-     {display === "flex"?(<CloseIcon/>):(<OpenIcon/>)}
+     {height === "300px"?(<CloseIcon/>):(<OpenIcon/>)}
 
     </div>
   )
