@@ -31,11 +31,12 @@ body{
   
 }
 
-.navbar-items button, .hmbg-menu button{
+.navbar-items > *, .hmbg-menu > *{
   font-size: large;
   background: none;
   border:none;
   color:yellow;
+  text-decoration: none;
 }
 
 .navbar-items button:hover, .hmbg-menu button:hover{
@@ -78,10 +79,11 @@ body{
 }
 
 
-.hmbg-menu button{
+.hmbg-menu > *{
   border:2px solid rgb(83, 82, 82);
   height: 30%;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 

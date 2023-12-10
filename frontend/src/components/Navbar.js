@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import HamburgerMenu from './HamburgerMenu'
 
 import Menu from './Menu';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   
@@ -18,21 +19,21 @@ function Navbar() {
         </div> 
 
       <div className='navbar-items'>
-        <button id = "home-btn">
+        <Link id = "home-btn" to={"/"}>
          _home
-        </button>
-        <button id = "about-btn">
+        </Link>
+        <Link id = "about-btn" to={"/about"}>
             _about
-            </button>
-            <button id = "resume-btn">
+            </Link>
+            <Link id = "resume-btn" to={"/resume"}>
              _resume
-            </button>
-            <button id = "contact-btn">
+            </Link>
+            <Link id = "contact-btn" to={"/contact"}>
               _contact
-            </button>
-            <button id = "project-btn">
+            </Link>
+            <Link id = "project-btn" to={"/projects"}>
                _projects
-            </button>
+            </Link>
          
       </div>
      

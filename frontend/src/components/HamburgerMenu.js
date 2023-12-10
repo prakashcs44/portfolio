@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function HamburgerMenu({menuHeight}) {
   const buttonDisplay = menuHeight === "0px"?"none":"inline-block";
@@ -10,21 +11,21 @@ function HamburgerMenu({menuHeight}) {
     
     >
        
-        <button style={{display:buttonDisplay}}>
+        <Link style={{display:buttonDisplay}} to={"/"}>
          _home
-        </button >
-        <button style={{display:buttonDisplay}}>
+        </Link>
+        <Link style={{display:buttonDisplay}} to={"/about"}>
             _about
-            </button>
-            <button style={{display:buttonDisplay}} >
+            </Link>
+            <Link style={{display:buttonDisplay}} to={"/resume"}>
              _resume
-            </button>
-            <button style={{display:buttonDisplay}}>
+            </Link>
+            <Link style={{display:buttonDisplay}} to={"/contact"}>
               _contact
-            </button>
-            <button style={{display:buttonDisplay}}>
+            </Link>
+            <Link style={{display:buttonDisplay}} to={"/projects"}>
               _projects
-            </button>
+            </Link>
           
     
     </div>
