@@ -10,7 +10,7 @@ function Home() {
     <div>
       <SkillsDynamicDisplay/>
       <Main/>
-      <AboutMe/>
+      
       <Skills/>
      
     </div>

@@ -11,11 +11,13 @@ import Projects from "./pages/Projects"
 import About from "./pages/About"
 
 function App() {
+
+
   return (
     <div>
       <Navbar/>
       <Routes>
-        <Route path='/' element = {<Home/>}/>
+        <Route path='/portfolio' element = {<Home/>}/>
         <Route path = '/contact' element = {<Contact/>}/>
         <Route path='/resume' element = {<Resume/>}/>
         <Route path='/projects' element = {<Projects/>}/>

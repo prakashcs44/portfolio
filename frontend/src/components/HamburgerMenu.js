@@ -11,7 +11,7 @@ function HamburgerMenu({menuHeight}) {
     
     >
        
-        <Link style={{display:buttonDisplay}} to={"/"}>
+        <Link style={{display:buttonDisplay}} to={"/portfolio"}>
          _home
         </Link>
         <Link style={{display:buttonDisplay}} to={"/about"}>
