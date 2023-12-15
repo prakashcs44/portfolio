@@ -4,8 +4,8 @@ function Resume() {
 
   
   return (
-    <div>
-      resume
+    <div style={{textAlign:"center",marginTop:"60px"}}>
+      Oops.. not available at this moment
     </div>
   )
 }

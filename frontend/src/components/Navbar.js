@@ -24,6 +24,7 @@ const location = useLocation()
         <Link id = "home-btn" to={"/portfolio"}
         
         style={{color:location.pathname === "/portfolio"?"purple":"yellow"}}
+       
         >
          _home
         </Link>

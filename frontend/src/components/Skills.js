@@ -15,7 +15,7 @@ function Skills() {
 
   return (
     <div className='skills-container'>
-      <h1>My skills</h1>
+      <h1>Technical skills</h1>
        <Carousel items={[htmlSvg,cssSvg,cppSvg,jsSvg,reactSvg,mongoSvg,nodeSvg]}/>
     </div>
   )

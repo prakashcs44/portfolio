@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+ 
 }
 
 
@@ -12,6 +14,11 @@
 
 body{
   background-color: black;
+ 
+}
+
+button{
+  cursor: pointer;
 }
 
 .navbar{
@@ -42,10 +49,13 @@ body{
   border:none;
   color:yellow;
   text-decoration: none;
+  transition: transform 0.5s;
 }
 
-.navbar-items > * :hover, .hmbg-menu > * :hover{
-  color:rgb(182, 12, 182);
+.navbar-items > *:hover, .hmbg-menu > *:hover{
+  color:rgb(182, 12, 182) !important;
+  transform: scale(1.2);
+ 
 }
 
 
@@ -206,17 +216,24 @@ body{
 
 
 .left-arrow,.right-arrow{
-  width:40px;
-  height: 40px;
+  width:50px;
+  height: 50px;
   border-radius: 40px;
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(79, 79, 79);
   display: flex;
   justify-content: center;
   align-items: center;
+  
+}
+
+
+.left-arrow img,.right-arrow img{
+  width: 100%;
+  height: 100%;
 }
 
 .left-arrow:hover,.right-arrow:hover{
-  background-color: rgb(43, 42, 42);
+  background-color: var(--heading-color);
 }
 
 
@@ -251,7 +268,7 @@ body{
 
 
 .contact-page{
-  margin-top:50px;
+  margin-top:200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,6 +283,13 @@ body{
   margin: auto;
 }
 
+.address-head,.social-profiles-head,.email-head,.call-head{
+  display: flex;
+  align-items: center;
+  gap:10px;
+  margin-top:5px;
+}
+
 .address,.social-profiles,.email,.call{
   width:600px;
   height:100px;
@@ -274,6 +298,13 @@ body{
   margin:auto;
   padding-left: 10px;
   box-shadow: 3px 3px 30px rgb(90, 88, 86);
+}
+
+.social-media-icons{
+  display: flex;
+  align-items: center;
+  gap:15px;
+  margin-top:10px;
 }
 
 p{
@@ -314,11 +345,13 @@ p{
 .contact-message > * input{
   height:80%;
   font-size:1rem;
+  color:black;
 }
 
 .message textarea{
   height:90%;
   font-size: 1rem;
+  color:black;
 }
 
 .contact-message .message{
@@ -336,6 +369,14 @@ p{
   border-radius: 10px;
   background-color: rgb(126, 210, 42);
   color:white;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.send-btn:hover{
+  transform:scale(1.2);
+  
+
 }
 
 
@@ -358,8 +399,14 @@ p{
   margin-top: 60px;
   margin-left:20px;
   box-shadow: 3px 3px 30px rgb(90, 88, 86);
+  transition: transform 0.5s linear;
 }
 
+.profile-img:hover{
+  transform: scale(1.1);
+  border: 2px solid var(--heading-color);
+  
+}
 
 .profile-img img{
   width:100%;
@@ -369,13 +416,16 @@ p{
 }
 
 .profession{
-  color:rgb(76, 210, 42);
-  /* border: 2px solid red; */
+ 
+
   text-align: center;
   margin-top: 20px;
   
 }
 
+.my-profession{
+ color:rgb(76, 210, 42);
+}
 
 
 .skills-section{
@@ -445,41 +495,38 @@ p{
 }
 
 .project-page{
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-   width: 100vw;
+ 
+  
 }
 
 .project-page-heading{
   color:rgb(76, 210, 42);
-  width:30%;
   border-bottom: 1px solid rgb(76, 210, 42);
   text-align: center;
 }
 
 
 .projects-container{
-  width:90%;
+  margin-top: 40px;
+   width:75vw;
    color: white;
-   margin: auto;
-   margin-top: 60px;
-   display:grid;
-   box-shadow: 3px 3px 30px rgb(90, 88, 86);
+   display:flex;
   
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+ 
+   
+  
  
 
 }
 
 .project{
- 
-   width:50%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width:40%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -487,6 +534,7 @@ p{
   gap:20px;
   border-radius: 20px;
   box-shadow: 3px 3px 30px rgb(90, 88, 86);
+
 
 }
 
@@ -506,13 +554,44 @@ p{
 
 
 .project-desc{
-  width:95%;
+   width:95%;
   line-height: 1.4;
   color:yellow;
   margin-bottom: 10px;
  
   word-wrap: break-word;
 }
+
+
+.project-links{
+  display: flex;
+  align-items: center;
+  gap:30px;
+  margin-bottom: 10px;
+ 
+}
+
+.project-links > *{
+  text-decoration: none;
+  width:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  color: var(--heading-color);
+  font-size: 0.9rem;
+  transition: transform 0.5s;
+}
+
+.project-links > *:hover{
+  transform: scale(1.1);
+}
+
+.project-source{
+  background-color: rgb(45, 44, 44);
+   border: none;
+}
+
 
 @media only screen  and (max-width:800px){
   .menu-lines-container{
@@ -537,7 +616,7 @@ p{
 
 
 .skills-container{
-  width:100%;
+  width:95%;
 }
 
 .footer{
@@ -577,13 +656,15 @@ p{
   width:90%;
 }
 
-.profile-img{
-  width:80% ;
-  height: 80%;
-}
 
+.projects-container{
+  flex-direction: column;
+  gap:40px;
+  width:100%;
+}
 .project{
-  width:80%;
+  width:90%;
+ 
 }
 
 }

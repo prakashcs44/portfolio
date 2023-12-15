@@ -2,7 +2,13 @@ import React from 'react'
 import AboutMe from '../components/AboutMe'
 import img from "../pictures/pic4.jpg"
 import SkillsPercentageBar from "../components/SkillsPercentageBar"
-import JsIcon from "../icons/JsIcon"
+import webImg from "../pictures/software-window-icon.svg"
+import musicImg from "../pictures/music-icon.svg"
+import exerciseImg from "../pictures/running-icon.svg"
+import moviesImg from "../pictures/movie-media-player-icon.svg"
+
+
+
 function About() {
   return (
     <div className='about-page'>
@@ -11,7 +17,7 @@ function About() {
         </img>
       </div>
       <div className='profession'>
-        <h2>Full stack developer/designer</h2>
+        <h2 className='my-profession'>Full stack developer/designer</h2>
       </div>
        <AboutMe/>
        <div className='skills-section'>
@@ -72,34 +78,34 @@ function About() {
        
        <div className='interest-item'>
         <div className='interest-icon'>
-          icon
+         <img src={webImg}></img>
         </div>
-        <p>web development</p>
+        <h3>web development</h3>
         
        </div>
 
        <div className='interest-item'>
         <div className='interest-icon'>
-          icon
+        <img src={musicImg}></img>
         </div>
-        <p>songs</p>
+        <h3>songs</h3>
         
        </div>
        
        <div className='interest-item'>
         <div className='interest-icon'>
-          icon
+        <img src={moviesImg}></img>
         </div>
-        <p>movies</p>
+        <h3>movies</h3>
         
        </div>
         
       
        <div className='interest-item'>
         <div className='interest-icon'>
-          icon
+        <img src={exerciseImg}></img>
         </div>
-        <p>exercise</p>
+        <h3>exercise</h3>
         
        </div>
 

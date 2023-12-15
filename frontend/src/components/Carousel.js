@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import ArrowLeft from '../icons/ArrowLeft'
-import ArrowRight from '../icons/ArrowRight'
+import ArrowLeft from "../pictures/angle-circle-arrow-left-icon.svg"
+import ArrowRight from '../pictures/angle-circle-arrow-right-icon.svg'
 
 
 
@@ -130,7 +130,7 @@ const next = ()=>{
         <div className='left-arrow'
          onClick={()=>prev()}
         >
-        <ArrowLeft />
+       <img src={ArrowLeft}></img>
         </div>
         
      
@@ -147,7 +147,7 @@ const next = ()=>{
       <div className='right-arrow'
        onClick={()=>next()}
       >
-      <ArrowRight/>
+      <img src = {ArrowRight}></img>
       </div>
      
     </div>

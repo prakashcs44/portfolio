@@ -3,6 +3,9 @@ import AdressIcon from "../icons/AdressIcon"
 import ShareIcon from "../icons/ShareIcon"
 import MailIcon from "../icons/MailIcon"
 import CallIcon from "../icons/CallIcon"
+import LinkedinIcon from "../icons/LinkedinIcon"
+
+import InstaIcon from "../pictures/ig-instagram-icon.svg"
 function Contact() {
   return (
 
@@ -10,24 +13,49 @@ function Contact() {
 
    <h1 className='heading-contact'>CONTACT ME</h1>
     <div className='address'>
-    
-     <h2>    <AdressIcon/> My Adress</h2>
-       <p>Naharlagun,Arunachal Pradesh</p>
+    <div className='address-head'>
+    <AdressIcon/> 
+    <h2> My Adress</h2>
+    </div>
+  
+     <p>Naharlagun,Arunachal Pradesh</p>
     </div>
     <div className='social-profiles'>
+      <div className='social-profiles-head'>
+      <ShareIcon/> 
+      <h2> Social profiles</h2>
+      </div>
+      <div className='social-media-icons'>
+      <LinkedinIcon/>
+       <img src={InstaIcon}
+       
+       style={{width:"40px",height:"40px"}}
+       
+       ></img>
+      </div>
+    
+
      
-     <h2>   <ShareIcon/> Social profiles</h2>
 
     </div>
     <div className='email'>
+     <div className='email-head'>
+     <MailIcon/>
+     <h2>Email me</h2>
+     </div>
      
-     <h2> <MailIcon/>  Email me</h2>
      <p>prakashbhattarai@gmail.com</p>
+   
 
     </div>
     <div className='call'>
-      <h2><CallIcon/>call me</h2>
-      <p>+919612565045</p>
+      <div className='call-head'>
+      <CallIcon/>
+      <h2>call me</h2>
+      </div>
+     
+      <p>+919612565045/6033954761</p>
+     
     </div>
 
 
