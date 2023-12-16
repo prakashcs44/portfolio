@@ -55,7 +55,7 @@ function Contact() {
     </div>
     <div className='email'>
      <div className='email-head'>
-     <MailIcon/>
+     <MailIcon color = {"green"}/>
      <h2>Email me</h2>
      </div>
      
