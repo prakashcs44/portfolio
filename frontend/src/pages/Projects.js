@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useRef ,useEffect} from 'react'
 import img from "../pictures/pic2.jpg"
 import { Link } from 'react-router-dom'
+import upsideLoading from '../utility/IntersectionObserver';
 function Projects() {
+
+const projectPageRef = useRef();
+  
+useEffect(()=>{
+  if(projectPageRef.current)
+  upsideLoading(projectPageRef.current)
+  
+})
+
+
+
+
+
+
   return (
-    <div className='project-page'>
+    <div className='project-page  animating-upward-loading' ref={projectPageRef}>
     <h1 className='project-page-heading'>MY PROJECTS</h1>
     <div className='projects-container'>
       <div className='project'>

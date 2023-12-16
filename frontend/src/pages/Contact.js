@@ -1,17 +1,32 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import AdressIcon from "../icons/AdressIcon"
 import ShareIcon from "../icons/ShareIcon"
 import MailIcon from "../icons/MailIcon"
 import CallIcon from "../icons/CallIcon"
 import LinkedinIcon from "../icons/LinkedinIcon"
-
+import upsideLoading from '../utility/IntersectionObserver';
 import InstaIcon from "../pictures/ig-instagram-icon.svg"
 function Contact() {
+
+
+
+  const contactPageRef = useRef();
+  useEffect(()=>{
+    if(contactPageRef.current)
+    upsideLoading(contactPageRef.current)
+    
+  })
+  
+
+
+
+
+
   return (
 
-<div className='contact-page'>
+<div className='contact-page animating-upward-loading ' ref={contactPageRef}>
 
-   <h1 className='heading-contact'>CONTACT ME</h1>
+   <h1 className='heading-contact ' >CONTACT ME</h1>
     <div className='address'>
     <div className='address-head'>
     <AdressIcon/> 

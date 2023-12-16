@@ -2,28 +2,28 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function HamburgerMenu({menuHeight}) {
-  const buttonDisplay = menuHeight === "0px"?"none":"inline-block";
+  const buttonDisplay = menuHeight === "0px"?"none":"flex";
  
   return (
     <div className='hmbg-menu'
     
-    style={{height:menuHeight}}
+    style={{display:buttonDisplay,height:menuHeight}}
     
     >
        
-        <Link style={{display:buttonDisplay}} to={"/portfolio"}>
+        <Link  to={"/portfolio"}>
          _home
         </Link>
-        <Link style={{display:buttonDisplay}} to={"/about"}>
+        <Link  to={"/about"}>
             _about
             </Link>
-            <Link style={{display:buttonDisplay}} to={"/resume"}>
+            <Link  to={"/resume"}>
              _resume
             </Link>
-            <Link style={{display:buttonDisplay}} to={"/contact"}>
+            <Link  to={"/contact"}>
               _contact
             </Link>
-            <Link style={{display:buttonDisplay}} to={"/projects"}>
+            <Link  to={"/projects"}>
               _projects
             </Link>
           

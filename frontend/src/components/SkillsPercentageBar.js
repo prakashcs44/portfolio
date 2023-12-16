@@ -14,13 +14,30 @@ useEffect(()=>{
 },[percentageBarContainerRef,percentage])
 
 
+const progressBarRef = useRef();
 
 
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    const target = entry.target;
+     if(entry.isIntersecting&&target.classList.contains("animating-progress-loading")){
+       target.classList.toggle("show-progress-bar-loading");
+       target.classList.remove("animating-progress-loading");
+     }
+   })
+})
+
+
+useEffect(()=>{
+  if(progressBarRef.current){
+    observer.observe(progressBarRef.current)
+  }
+})
 
   return (
     <div className='skills-percentage-bar' ref={percentageBarContainerRef}
     >
-       <div
+       <div ref={progressBarRef} className='animating-progress-loading'
        style={{width:`${barWidth}px`}}
        
        ></div>

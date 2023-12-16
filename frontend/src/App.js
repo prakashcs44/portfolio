@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Routes,Route} from "react-router-dom"
 import "./App.css"
 
@@ -11,6 +11,8 @@ import Projects from "./pages/Projects"
 import About from "./pages/About"
 
 function App() {
+
+ 
 
 
   return (

@@ -1,11 +1,20 @@
-import React from 'react'
+import React  from 'react'
 import GithubIcon from '../icons/GithubIcon'
 import LinkedinIcon from "../icons/LinkedinIcon";
 import MailIcon from '../icons/MailIcon';
 
 function Footer() {
+
+ 
+
+
+
+
+
+
+
   return (
-    <div className='footer'>
+    <div className='footer' >
       <div className='handles'>
         <GithubIcon/>
         <MailIcon/>
