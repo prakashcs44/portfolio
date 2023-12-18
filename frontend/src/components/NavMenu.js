@@ -5,34 +5,34 @@ function NavMenu() {
     const location = useLocation()
   return (
    <>
-    <Link id = "home-btn" to={"/portfolio"}
+    <Link id = "home-btn" to={"/"}
         
-        style={{color:location.pathname === "/portfolio"?"purple":"yellow"}}
+        style={{color:location.pathname === "/"?"purple":"yellow"}}
        
         >
          _home
         </Link>
-        <Link id = "about-btn" to={"/portfolio/about"}
+        <Link id = "about-btn" to={"/about"}
         
-        style={{color:location.pathname === "/portfolio/about"?"purple":"yellow"}}
+        style={{color:location.pathname === "/about"?"purple":"yellow"}}
         
         >
             _about
             </Link>
-            <Link id = "resume-btn" to={"/portfolio/resume"}
+            <Link id = "resume-btn" to={"/resume"}
             
-            style={{color:location.pathname === "/portfolio/resume"?"purple":"yellow"}}
+            style={{color:location.pathname === "/resume"?"purple":"yellow"}}
             >
              _resume
             </Link>
-            <Link id = "contact-btn" to={"/portfolio/contact"}
+            <Link id = "contact-btn" to={"/contact"}
             
-            style={{color:location.pathname === "/portfolio/contact"?"purple":"yellow"}}
+            style={{color:location.pathname === "/contact"?"purple":"yellow"}}
             >
               _contact
             </Link>
-            <Link id = "project-btn" to={"/portfolio/projects"}
-            style={{color:location.pathname === "/portfolio/projects"?"purple":"yellow"}}
+            <Link id = "project-btn" to={"/projects"}
+            style={{color:location.pathname === "/projects"?"purple":"yellow"}}
             >
                _projects
             </Link>

@@ -19,11 +19,11 @@ function App() {
     <div>
       <Navbar/>
       <Routes>
-        <Route path='/portfolio' element = {<Home/>}/>
-        <Route path = '/portfolio/contact' element = {<Contact/>}/>
-        <Route path='/portfolio/resume' element = {<Resume/>}/>
-        <Route path='/portfolio/projects' element = {<Projects/>}/>
-        <Route path='/portfolio/about' element = {<About/>}/>
+        <Route path='/' element = {<Home/>}/>
+        <Route path = '/contact' element = {<Contact/>}/>
+        <Route path='/resume' element = {<Resume/>}/>
+        <Route path='/projects' element = {<Projects/>}/>
+        <Route path='/about' element = {<About/>}/>
 
       </Routes>
     <Footer/>
