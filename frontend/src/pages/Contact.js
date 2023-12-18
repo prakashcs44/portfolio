@@ -15,7 +15,7 @@ function Contact() {
     if(contactPageRef.current)
     upsideLoading(contactPageRef.current)
     
-  })
+  },[])
   
 
 

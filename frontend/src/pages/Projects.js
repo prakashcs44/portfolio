@@ -10,7 +10,7 @@ useEffect(()=>{
   if(projectPageRef.current)
   upsideLoading(projectPageRef.current)
   
-})
+},[])
 
 
 

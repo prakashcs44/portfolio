@@ -18,7 +18,7 @@ useEffect(()=>{
   if(skillsRef.current)
   upsideLoading(skillsRef.current)
   
-})
+},[])
 
 
 
