@@ -442,21 +442,30 @@ p{
   margin-top: 60px;
   margin-left:20px;
   box-shadow: 3px 3px 30px rgb(90, 88, 86);
+
  
   overflow: hidden;
 }
 
 .profile-img img:hover{
+
+  transition: transform 0.5s linear;
+
+}
+
+.profile-img:hover img{
+
   transform: scale(1.1);
   border: 2px solid var(--heading-color);
   
 }
 
 .profile-img img{
+  transition:transform 0.5s linear;
   width:100%;
   height: 100%;
   border-radius: 50%;
-  transition: transform 0.5s linear;
+ 
  
 }
 
