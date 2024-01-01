@@ -14,10 +14,18 @@ import upsideLoading from '../utility/IntersectionObserver';
 function Skills() {
 
 const skillsRef = useRef();
+
 useEffect(()=>{
+  let observer;
   if(skillsRef.current)
-  upsideLoading(skillsRef.current)
+  observer  = upsideLoading(skillsRef.current)
   
+
+   return ()=>{
+    if(skillsRef.current)
+      observer.unobserve(skillsRef.current);
+   }
+
 },[])
 
 

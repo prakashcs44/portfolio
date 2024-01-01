@@ -32,7 +32,11 @@ useEffect(()=>{
   if(progressBarRef.current){
     observer.observe(progressBarRef.current)
   }
-})
+  return ()=>{
+    if(progressBarRef.current)
+    observer.unobserve(progressBarRef.current);
+  }
+},[])
 
   return (
     <div className='skills-percentage-bar' ref={percentageBarContainerRef}

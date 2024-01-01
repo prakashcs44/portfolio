@@ -11,7 +11,6 @@ const slidesContainerRef = useRef();
 const [slidesWidth,setSlidesWidth] = useState(0);
 const [currSlide,setCurrSlide] = useState();
 
-const autoSlidingIntervalIdRef = useRef(null);
 
 
 
@@ -76,48 +75,6 @@ const next = ()=>{
 
 
 
-// useEffect(()=>{
-
-// console.log(currSlide?.id)
-
-// if(currSlide === slides[0]){
-  
-//   clearInterval(autoSlidingIntervalIdRef.current)
-//   autoSlidingIntervalIdRef.current = setInterval(()=>{
-//     next();
-//   },3000)
-// }
-
-// else if(currSlide === slides[slides.length-1]?.id){
- 
-//   clearInterval(autoSlidingIntervalIdRef.current)
-//   autoSlidingIntervalIdRef.current = setInterval(()=>{
-//     prev();
-//   },3000)
-// }
-
-// },[currSlide])
-
-
-
-
-// useEffect(()=>{
-//   clearInterval(autoSlidingIntervalIdRef.current);
-//   autoSlidingIntervalIdRef.current = setInterval(()=>{
-//     next();
-//   },2000)
-
-//   setTimeout(()=>{
-//     clearInterval(autoSlidingIntervalIdRef.current);
-//     autoSlidingIntervalIdRef.current = setInterval(()=>{
-//       prev();
-//     },2000)
-//   },3000*slides.length)
-//   return ()=>{
-//     clearInterval(autoSlidingIntervalIdRef.current);
-//   }
-// })
- 
 
  
 
@@ -137,7 +94,7 @@ const next = ()=>{
         <div className='carousel-slides-container' >
          <div className=  "slides-track" ref={slidesContainerRef}>
           {items.map((item,index)=>{
-           return <div className='carousel-slides' id={`id${index+1}`} ><img src= {item} alt='laro'></img></div>
+           return <div className='carousel-slides' id={index}><img src= {item} alt='laro'></img></div>
           })}
           </div>
         </div>

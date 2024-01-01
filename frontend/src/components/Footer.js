@@ -2,7 +2,7 @@ import React  from 'react'
 import GithubIcon from '../icons/GithubIcon'
 import LinkedinIcon from "../icons/LinkedinIcon";
 import MailIcon from '../icons/MailIcon';
-import {Link} from "react-router-dom"
+
 function Footer() {
 
  

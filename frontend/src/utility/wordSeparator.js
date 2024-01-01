@@ -1,7 +1,7 @@
 
 
 
-const f = (str)=>{
+ const wordSeparator = (str)=>{
 
 let arr = [];
 
@@ -17,10 +17,8 @@ return arr;
 
 }
 
+export default wordSeparator;
 
-console.log(f("laro"))
 
 
-// let str = "FEBdfb";
 
-// str.

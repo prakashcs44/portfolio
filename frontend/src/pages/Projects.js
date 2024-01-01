@@ -7,9 +7,15 @@ function Projects() {
 const projectPageRef = useRef();
   
 useEffect(()=>{
+  let observer;
   if(projectPageRef.current)
-  upsideLoading(projectPageRef.current)
+  observer = upsideLoading(projectPageRef.current)
   
+
+  return ()=>{
+    if(projectPageRef.current)
+    observer.unobserve(projectPageRef.current);
+  }
 },[])
 
 

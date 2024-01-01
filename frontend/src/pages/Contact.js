@@ -12,9 +12,15 @@ function Contact() {
 
   const contactPageRef = useRef();
   useEffect(()=>{
+    let observer;
     if(contactPageRef.current)
-    upsideLoading(contactPageRef.current)
+     observer = upsideLoading(contactPageRef.current)
     
+
+    return ()=>{
+      if(contactPageRef.current)
+      observer.unobserve(contactPageRef.current);
+    }
   },[])
   
 

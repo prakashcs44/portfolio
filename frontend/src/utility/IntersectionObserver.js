@@ -13,9 +13,9 @@ export default function upsideLoading(element) {
       
       
     
-      
+         
           observer.observe(element)
-     
+          return observer;
       
       
 
