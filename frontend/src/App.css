@@ -15,19 +15,19 @@
 animation-name: loading;
 animation-duration: 1s;
 animation-fill-mode: forwards;
-transition:margin-top 1s;
+transition:all 1s;
 }
 
-.animating-upward-loading{
- margin-top: 100vh;
-}
+
 
 @keyframes loading {
   from{
-    margin-top: 100vh;
+    opacity: 0;
+   transform: translateY(40px);
   }
   to{
-    margin-top:200px;
+    opacity: 1;
+   transform: translateY(0px);
   }
 }
 
