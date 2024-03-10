@@ -38,8 +38,6 @@ useEffect(()=>{
 
 
 
-
-
 const moveSlides = (dist,targetSlide)=>{
   
     

@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutMe from '../components/AboutMe'
-import img from "../pictures/pic4.jpg"
+import img from "../pictures/pic2.jpg"
 import SkillsPercentageBar from "../components/SkillsPercentageBar"
 import webImg from "../pictures/software-window-icon.svg"
 import musicImg from "../pictures/music-icon.svg"

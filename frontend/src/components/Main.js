@@ -4,7 +4,7 @@ function Main() {
   return (
     <div className='main-content'>
        
-      <img src={img} alt = "handsome boy" ></img>
+      <img src={img} alt = "img" ></img>
     </div>
   )
 }
