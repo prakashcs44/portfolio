@@ -1,8 +1,49 @@
 import React, { useRef ,useEffect} from 'react'
-import img from "../pictures/pic2.jpg"
-import { Link } from 'react-router-dom'
+import p1img from "../files/homepage-GoogleChrome2024-04-2710-31-15-ezgif.com-video-to-gif-converter.gif"
+import p2img from "../files/Graphvisualizer-GoogleChrome2024-04-2710-32-48-ezgif.com-video-to-gif-converter.gif"
+import p3img from "../files/Document-GoogleChrome2024-04-2711-36-23-ezgif.com-video-to-gif-converter.gif"
+import p4img from "../files/Moviesearch-GoogleChrome2024-04-2711-51-51-ezgif.com-video-to-gif-converter.gif"
 import upsideLoading from '../utility/IntersectionObserver';
+
+const projects = [
+  {
+    name:"Ecommerce website",
+    imgLink:p1img,
+    desc:"Full stack ecommerce website built using MERN stack",
+    sourceLink:"https://github.com/prakashcs44/ecommerce_website",
+    demoLink:"https://ecommerce-website-jwke.vercel.app",
+
+  },
+  {
+    name:"Graph visualiser",
+    imgLink:p2img,
+    desc:"Graph visualiser where you can visualisze dfs and bfs algorithms",
+    sourceLink:"https://github.com/prakashcs44/graph_visualizer",
+    demoLink:"https://prakashcs44.github.io/graph-visualizer/",
+
+  },
+  {
+    name:"Flappy Bird",
+    imgLink:p3img,
+    desc:"Flappy bird game ",
+    sourceLink:"https://github.com/prakashcs44/flappy_bird",
+    demoLink:"https://prakashcs44.github.io/flappy_bird/",
+
+  },
+  {
+    name:"Movie search",
+    imgLink:p4img,
+    desc:"Movie searching website that used omdp api to fetch movies ",
+    sourceLink:"https://github.com/prakashcs44/flappy_bird",
+    demoLink:"https://prakashcs44.github.io/flappy_bird/",
+
+  },
+ 
+]
+
+
 function Projects() {
+
 
 const projectPageRef = useRef();
   
@@ -27,58 +68,32 @@ useEffect(()=>{
     <div className='project-page  animating-upward-loading' ref={projectPageRef}>
     <h1 className='project-page-heading'>MY PROJECTS</h1>
     <div className='projects-container'>
-      <div className='project'>
-        <h2 className='project-name'>CHAT BOT</h2>
-        <img className='project-img'  src  = {img}   alt='project'></img>
-        <h3 className='project-date'>sept 2023 - nov 12</h3>
-        <div className='project-desc'>
-         <h3>Chat bot using bard api and react</h3>
-        </div>
-        <div className='project-links'>
-       <Link to = "https://github.com/prakashcs44/ai-chatbot" className='project-source'>SOURCE</Link>
-       <Link className='project-source'>DEMO</Link>
-       </div>
-      </div>
-      <div className='project'>
-        <h2 className='project-name'>BLOG APP</h2>
-        <img className='project-img'  src  = {img}   alt='project'></img>
-        <h3 className='project-date'>july 2023 - aug 12</h3>
-        <div className='project-desc'>
-         <h3>full stack blog app using react and express js</h3>
-        </div>
-        <div className='project-links'>
-       <Link  to = "https://github.com/prakashcs44/React-blog-app"   className='project-source'>SOURCE</Link>
-       <Link className='project-source'>DEMO</Link>
-       </div>
-      </div>
+
+      {
+        projects.map(project=>{
+          return (
+            <div className='project'>
+            <h2 className='project-name'>{project.name}</h2>
+            <img className='project-img'  src  = {project.imgLink}   alt={project.name}></img>
+           
+            <div className='project-desc'>
+             <h3>{project.desc}</h3>
+            </div>
+            <div className='project-links'>
+           <a href = {project.sourceLink} className='project-source'>SOURCE</a>
+           <a href={project.demoLink} className='project-source'>DEMO</a>
+           </div>
+          </div>
+         
+          )
+        })
+      }
+
+      
       </div>
 
 
-      <div className='projects-container'>
-      <div className='project'>
-        <h2 className='project-name'>CHAT APP</h2>
-        <img className='project-img'  src  = {img}   alt='project'></img>
-        <h3 className='project-date'>nov 2023 - dec 5</h3>
-        <div className='project-desc'>
-         <h3>Chat app using react express and socket io</h3>
-        </div>
-        <div className='project-links'>
-       <Link to = "https://github.com/prakashcs44/chat-app" className='project-source'>SOURCE</Link>
-       <Link className='project-source'>DEMO</Link>
-       </div>
-      </div>
-      <div className='project'>
-        <h2 className='project-name'>MOVIE SEARCH </h2>
-        <img className='project-img'  src  = {img}   alt='project'></img>
-        <h3 className='project-date'>sep 2023 - nov 5</h3>
-        <div className='project-desc'>
-         <h3>Movie search website using react and omdb api</h3>
-        </div>
-        <div className='project-links'>
-       <Link to = "https://github.com/prakashcs44/movie-search-app" className='project-source'>SOURCE</Link>
-       <Link className='project-source'>DEMO</Link>
-       </div>
-      </div>
+    
       </div>
     
     
@@ -89,7 +104,7 @@ useEffect(()=>{
      
     
     
-    </div>
+    
   )
 }
 

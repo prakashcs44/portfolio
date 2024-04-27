@@ -11,7 +11,7 @@ import moviesImg from "../pictures/movie-media-player-icon.svg"
 
 function About() {
   return (
-    <div className='about-page'>
+    <div className='about-page' id='about'>
       <div className='profile-img'>
       <img src={img} alt='profile-img'>
         </img>

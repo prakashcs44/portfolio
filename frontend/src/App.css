@@ -569,13 +569,10 @@ p{
    width:75vw;
    color: white;
    display:flex;
-  
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
- 
-   
-  
- 
+  gap:2em;
 
 }
 
