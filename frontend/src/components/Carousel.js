@@ -92,7 +92,7 @@ const next = ()=>{
         <div className='carousel-slides-container' >
          <div className=  "slides-track" ref={slidesContainerRef}>
           {items.map((item,index)=>{
-           return <div className='carousel-slides' id={index}><img src= {item} alt='laro'></img></div>
+           return <div className='carousel-slides' id={index}><img src= {item} alt='img'></img></div>
           })}
           </div>
         </div>
